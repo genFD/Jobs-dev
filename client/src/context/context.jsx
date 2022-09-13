@@ -3,7 +3,7 @@ import { getJobsAPI } from '../api/requests';
 import axios from 'axios';
 const AppContext = React.createContext();
 // production
-const API_URL = 'v1/jobs/';
+const API_URL = '/v1/jobs/';
 // developpement
 // const API_URL = 'http://localhost:8000/v1/jobs/';
 
