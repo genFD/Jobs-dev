@@ -25,7 +25,7 @@ const AppProvider = ({ children }) => {
   /* -------------------------------- */
   /* CORE FILTER FUNCTIONNALITIES */
   /* -------------------------------- */
-  console.log(getJobsAPI());
+  // console.log(getJobsAPI());
   //get all the data if query state is empty string or get a set of data that matches query and populate results state.
   const getJobs = async () => {
     setLoading(true);
