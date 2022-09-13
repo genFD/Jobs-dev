@@ -161,6 +161,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     // rerender list of jobs component when ckecked state is true
+    getJobs();
     getJobsByContract();
 
     // eslint-disable-next-line
