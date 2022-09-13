@@ -1,6 +1,6 @@
 import axios from 'axios';
 // production
-const API_URL = 'v1/jobs/';
+const API_URL = '/v1/jobs/';
 
 async function httpGetJobs() {
   try {
@@ -13,8 +13,7 @@ async function httpGetJobs() {
     };
   }
 }
-const getJobs = async () => {
+export const getJobsAPI = async () => {
   const { data } = await httpGetJobs();
   console.log(data);
 };
-getJobs();

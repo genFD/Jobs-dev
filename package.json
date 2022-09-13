@@ -2,7 +2,7 @@
   "name": "jobs",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
