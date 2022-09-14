@@ -4,9 +4,9 @@ import axios from "axios";
 const AppContext = React.createContext();
 // production
 // const API_URL = '/v1/jobs/';
-// const API_URL = "/";
+const API_URL = "/jobs";
 // developpement
-const API_URL = "http://localhost:8000/jobs/";
+// const API_URL = "http://localhost:8000/jobs/";
 
 const AppProvider = ({ children }) => {
   /* ------------------- */

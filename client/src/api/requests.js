@@ -1,7 +1,8 @@
 import axios from "axios";
 // production
-// const API_URL = '/v1/jobs/';
-const API_URL = "http://localhost:8000/jobs/";
+// const API_URL = "/v1/jobs/";
+const API_URL = "/jobs";
+// const API_URL = "http://localhost:8000/jobs/";
 
 async function httpGetJobs() {
   try {
