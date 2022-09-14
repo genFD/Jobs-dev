@@ -4,7 +4,7 @@ import axios from "axios";
 const AppContext = React.createContext();
 // production
 // const API_URL = '/v1/jobs/';
-const API_URL = "/v1";
+const API_URL = "v1";
 // developpement
 // const API_URL = "http://localhost:8000/jobs/";
 
