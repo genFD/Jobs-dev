@@ -10,7 +10,7 @@ const {
 
 const jobsRouter = express.Router();
 
-jobsRouter.get("/jobs", getDevjobs);
+jobsRouter.get("/", getDevjobs);
 jobsRouter.get("/jobs/search", filterDevjobs);
 jobsRouter.get("/jobs/search/location", filterByLocation);
 jobsRouter.get("/jobs/search/contract", filterByContract);
