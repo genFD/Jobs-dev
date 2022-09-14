@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { getJobsAPI } from '../api/requests';
+import { httpGetJobs } from '../api/requests';
 import axios from 'axios';
 const AppContext = React.createContext();
 // production
@@ -40,7 +40,7 @@ const AppProvider = ({ children }) => {
     }
     //2------ fetching data using url in the first step
     try {
-      const { data } = await axios.get(`${url}`);
+      const { data } = await httpGetJobs(`${url}`);
       if (data) {
         setResults(data);
       } else {

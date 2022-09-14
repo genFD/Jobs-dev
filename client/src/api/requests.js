@@ -13,7 +13,4 @@ async function httpGetJobs() {
     };
   }
 }
-export const getJobsAPI = async () => {
-  const { data } = await httpGetJobs();
-  console.log(data);
-};
+export { httpGetJobs };
