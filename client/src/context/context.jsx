@@ -1,25 +1,26 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { httpGetJobs } from '../api/requests';
-import axios from 'axios';
+import React, { useState, useEffect, useContext } from "react";
+import { httpGetJobs } from "../api/requests";
+import axios from "axios";
 const AppContext = React.createContext();
 // production
-const API_URL = '/v1/jobs/';
+// const API_URL = '/v1/jobs/';
+// const API_URL = "/";
 // developpement
-// const API_URL = 'http://localhost:8000/v1/jobs/';
+const API_URL = "http://localhost:8000/jobs/";
 
 const AppProvider = ({ children }) => {
   /* ------------------- */
   /* APP STATE */
   /* ------------------- */
   const [loading, setLoading] = useState(false);
-  const [query, setQuery] = useState('');
-  const [location, setLocation] = useState('');
+  const [query, setQuery] = useState("");
+  const [location, setLocation] = useState("");
   const [results, setResults] = useState([]);
   const [modal, setModal] = useState(false);
   const [checked, setChecked] = useState(false);
   const [jobDetail, setJobDetail] = useState(null);
   const [placeholder, setplaceholder] = useState(
-    JSON.parse(localStorage.getItem('placeholder'))
+    JSON.parse(localStorage.getItem("placeholder"))
   );
 
   /* -------------------------------- */
@@ -85,7 +86,7 @@ const AppProvider = ({ children }) => {
   // get a set of data that matches Full-time contract when checked state is true and populate results state.
   const getJobsByContract = async () => {
     setLoading(true);
-    const fullTime = 'Full Time';
+    const fullTime = "Full Time";
     let url;
     const urlQuery = `contract=${fullTime}`;
     if (checked) {
@@ -125,12 +126,12 @@ const AppProvider = ({ children }) => {
 
   // clear query input
   const clearQueryInput = () => {
-    setQuery('');
+    setQuery("");
   };
 
   // clear location input
   const clearLocationInput = () => {
-    setLocation('');
+    setLocation("");
   };
 
   // invoke getjobs or getjobsbylocation
@@ -188,7 +189,7 @@ const AppProvider = ({ children }) => {
   /* ---------------------------------- */
   // query input placeholder changes on large screens
   // storing  local storage placeholder state value in local storage so that value stays consistent
-  localStorage.setItem('placeholder', placeholder);
+  localStorage.setItem("placeholder", placeholder);
 
   // Swap placeholder on large screen
   const swapPlaceholder = () => {

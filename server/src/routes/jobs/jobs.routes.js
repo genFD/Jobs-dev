@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require("express");
 
 const {
   getDevjobs,
@@ -6,14 +6,14 @@ const {
   getSinglejob,
   filterByLocation,
   filterByContract,
-} = require('./jobs.controller');
+} = require("./jobs.controller");
 
 const jobsRouter = express.Router();
 
-jobsRouter.get('/', getDevjobs);
-jobsRouter.get('/search', filterDevjobs);
-jobsRouter.get('/search/location', filterByLocation);
-jobsRouter.get('/search/contract', filterByContract);
-jobsRouter.get('/:id', getSinglejob);
+jobsRouter.get("/jobs", getDevjobs);
+jobsRouter.get("/jobs/search", filterDevjobs);
+jobsRouter.get("/jobs/search/location", filterByLocation);
+jobsRouter.get("/jobs/search/contract", filterByContract);
+jobsRouter.get("/jobs/:id", getSinglejob);
 
 module.exports = jobsRouter;
