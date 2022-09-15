@@ -11,9 +11,9 @@ const {
 const jobsRouter = express.Router();
 
 jobsRouter.get("/", getDevjobs);
-jobsRouter.get("/jobs/search", filterDevjobs);
-jobsRouter.get("/jobs/search/location", filterByLocation);
-jobsRouter.get("/jobs/search/contract", filterByContract);
-jobsRouter.get("/jobs/:id", getSinglejob);
+jobsRouter.get("/search", filterDevjobs);
+jobsRouter.get("/search/location", filterByLocation);
+jobsRouter.get("/search/contract", filterByContract);
+jobsRouter.get("/:id", getSinglejob);
 
 module.exports = jobsRouter;
